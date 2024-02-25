@@ -1,6 +1,6 @@
 .box-model{
   width: 15vw;
-  height: 40vh;
+  height: 45vh;
   border: 2px solid black; 
   text-align: center;
   box-shadow: 10px 10px 2px 5px rgb(21, 0, 128);
@@ -19,6 +19,7 @@ input{
   margin-left: 20vw;
   font-size: xx-large;
   text-align: center;
+  
 }
 .heading{
   width: 30vw;

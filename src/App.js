@@ -5,15 +5,15 @@ import { friends } from "./components/data";
 
 function updatingId(inp) {
   switch (inp) {
-    case friends[0].name:
+    case friends[0].name.toLowerCase():
       return 0;
-    case friends[1].name:
+    case friends[1].name.toLowerCase():
       return 1;
-    case friends[2].name:
+    case friends[2].name.toLowerCase():
       return 2;
-    case friends[3].name:
+    case friends[3].name.toLowerCase():
       return 3;
-    case friends[4].name:
+    case friends[4].name.toLowerCase():
       return 4;
     default:
       return -1;
@@ -27,7 +27,7 @@ function App() {
 
   function afterSubmit(e) {
     e.preventDefault();
-    const friendIndex = updatingId(fName);
+    const friendIndex = updatingId(fName.trim().toLowerCase());
 
     if (friendIndex !== -1) {
       setSelectedFriend(friends[friendIndex]);
@@ -46,9 +46,10 @@ function App() {
         <input
           type="text"
           name="Info"
-          placeholder="Enter Friend's name"
+          placeholder="Enter the name"
           value={fName}
-          onChange={(e) => setFName(e.target.value)}
+          onChange={(e) => {setFName(e.target.value)
+          console.log(e.target.value)}}
           autoComplete="off"
           required
         />
