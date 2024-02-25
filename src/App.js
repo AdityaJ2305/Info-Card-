@@ -19,7 +19,7 @@ function updatingId(inp) {
       return -1;
   }
 }
-
+console.log("hello world")
 
 function App() {
   const [fName, setFName] = useState("");
